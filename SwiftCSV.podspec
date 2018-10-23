@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "SwiftCSV"
+  s.name         = "SwiftCSV2"
   s.version      = "0.4.0"
   s.summary      = "CSV parser for Swift"
   s.homepage     = "https://github.com/naoty/SwiftCSV"
