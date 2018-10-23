@@ -9,9 +9,9 @@
 import Foundation
 
 open class CSV {
-    static fileprivate let comma: Character = ","
+    public static let comma: Character = ","
     
-    open let header: [String]
+	public let header: [String]
 
     lazy var _namedView: NamedView = {
 
