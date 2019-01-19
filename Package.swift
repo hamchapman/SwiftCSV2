@@ -17,8 +17,9 @@ let package = Package(
         ),
         .target(
             name: "SwiftCSVTests",
+            dependencies: ["SwiftCSV"],
             path: "Tests"
         )
     ],
-    swiftLanguageVersions: [4]
+    swiftLanguageVersions: [.v4, .v4_2]
 )
