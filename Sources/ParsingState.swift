@@ -56,7 +56,7 @@ struct ParsingState {
                     appendChar(char)
                     innerQuotes = false
                 } else {
-                    fatalError("Can't have non-quote here: \(char)")
+                    fatalError("Can't have non-quote here: \(char). parsingField: \(parsingField), parsingQuotes: \(parsingQuotes)")
                 }
             } else {
                 if char == "\"" {
@@ -91,7 +91,7 @@ struct ParsingState {
                     innerQuotes = false
                     finishRow()
                 } else {
-                    fatalError("Can't have non-quote here: \(char)")
+                    fatalError("Can't have non-quote here: \(char). parsingField: \(parsingField), parsingQuotes: \(parsingQuotes)")
                 }
             } else {
                 if char == "\"" {
