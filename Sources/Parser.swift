@@ -29,7 +29,7 @@ extension CSV {
     ///
     /// - parameter text: Text to parse.
     /// - parameter delimiter: Character to split row and header fields by (default is ',')
-    /// - parameter limitTo: If set to non-nil value, enumeration stops 
+    /// - parameter limitTo: If set to non-nil value, enumeration stops
     ///   at the row with index `limitTo` (or on end-of-text, whichever is earlier.
     /// - parameter startAt: Offset of rows to ignore before invoking `block` for the first time. Default is 0.
     /// - parameter block: Callback invoked for every parsed row between `startAt` and `limitTo` in `text`.
@@ -73,6 +73,7 @@ extension CSV {
         while currentIndex < endIndex {
             let char = text[currentIndex]
 
+            print(currentIndex.encodedOffset)
             state.change(char)
 
             if limitReached(count) {
